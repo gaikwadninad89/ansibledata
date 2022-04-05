@@ -3,7 +3,7 @@
    
    become: yes
    become_method: sudo
-   remote_user: lubuntu1
+   remote_user: ubuntu
  
    tasks:
      - name: Update apt repository

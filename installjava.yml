@@ -1,0 +1,13 @@
+---
+ - hosts: all
+   
+   become: yes
+   become_method: sudo
+   remote_user: lubuntu1
+ 
+   tasks:
+     - name: Update apt repository
+       apt: update_cache=yes
+ 
+     - name: install java
+       command: apt-get install openjdk-8-jdk -y

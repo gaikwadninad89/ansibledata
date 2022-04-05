@@ -1,0 +1,10 @@
+---
+ - hosts: all
+   
+   become: yes
+   become_method: sudo
+   remote_user: ubuntu
+ 
+   tasks:
+     - name: uninstall java
+       command: apt-get autoremove openjdk-8-jdk -y
